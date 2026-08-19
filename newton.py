@@ -8,7 +8,7 @@ def second_derivative(f, x, h=1e-5):
     return (derivative(f, x + h, h) - derivative(f, x, h)) / h
 
 
-def optimize(f, x0, h=1e-5, max_iter=1000):
+def optimize(f, x0, h=1e-5, max_iter=100000):
     """Find a local minimum of f using Newton's method starting at x0.
     Use methods above to compute the first derivative and second derivative.
 
