@@ -2,7 +2,7 @@ import numpy as np
 from scipy.differentiate import jacobian, hessian
 
 def derivative(f, x, h=1e-5):
-    """Approximate the first derivative of f at x using forward difference."""
+    """:D Approximate the first derivative of f at x using forward difference."""
     return (f(x + h) - f(x)) / h
 
 
