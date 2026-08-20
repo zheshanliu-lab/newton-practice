@@ -21,6 +21,13 @@ def optimize(f, x0, h=1e-5, max_iter=100000):
     Returns:
     Estimated location of a local minimum.
     """
+
+    if not callable(f):
+        raise TypeError("f must be a function")
+        
+    if not isinstance(x0, (int, float)):
+        raise TypeError("x0 must be numeric")
+    
     x = x0
     for _ in range(max_iter):
         first_derivative = derivative(f, x)
@@ -33,4 +40,4 @@ def optimize(f, x0, h=1e-5, max_iter=100000):
 
         x = x_new
 
-        return x
+    return x
